@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Zadanie 10.2</title>
+		<link rel="stylesheet" type="text/css" href="vendor/normalize.css">
+		<link rel="stylesheet" type="text/css" href="vendor/flickity.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+
+		
+		
+		<!-- CAROUSEL -->
+
+		<div class="main-carousel"></div>
+			
+		<script id="template-slide-pictures" type="x-tmpl-mustache">
+			<div class="carousel-cell" id="{{ id }}" style="background-image: url({{ image }})">
+				<div class="container">
+					<h3>{{ title }}</h3>
+					{{{ description }}} 
+				</div>
+			</div>
+		</script>
+			
+
+		<!-- PROGRESS BAR -->
+
+		<div class="progress-bar"></div>
+
+		<!-- LINKS TO CELLS -->
+
+		<div class="links">
+			<a href="#carousel-cell1">View cell 1</a>
+			<a href="#carousel-cell2">View cell 2</a>
+			<a href="#carousel-cell3">View cell 3</a>
+			<a href="#carousel-cell4">View cell 4</a>
+			<a href="#carousel-cell5">View cell 5</a>
+			<a href="#carousel-cell6">View cell 6</a>
+		</div>
+
+		<!-- RESET BUTTON -->
+
+		<button type="button" class="btn" id="resetButton">Reset</button>
+
+		<!-- GOOGLE MAPS -->
+
+		<div class="map-wrapper">
+			<div id="map" class="map-google"></div>
+		</div>
+
+		<script>
+			
+			var imagesInfo = [
+				{
+					image: "'images/kreta.jpg'",
+					title: "Kreta",
+					description: "<p>Lorem ipsum dolor sit amet.</p>",
+					id: 'carousel-cell1',
+					coords: {lat: 35.278806, lng: 24.934289}
+				},
+				{
+					image: "'images/kuala-lumpur.jpg'",
+					title: "Kuala Lumpur",
+					description: "<p>Lorem ipsum dolor sit amet.</p>",
+					id: 'carousel-cell2',
+					coords: {lat: 3.15469 , lng: 101.714}
+				},
+				{
+					image: "'images/norway.jpg'",
+					title: "Norway",
+					description: "<p>Lorem ipsum dolor sit amet.</p>",
+					id: 'carousel-cell3',
+					coords: {lat: 64.573154, lng: 11.528036}
+				},
+				{
+					image: "'images/Rodos.jpg'",
+					title: "Rodos",
+					description: "<p>Lorem ipsum dolor sit amet.</p>",
+					id: 'carousel-cell4',
+					coords: {lat: 36.437987, lng: 28.223308}
+				},
+				{
+					image: "'images/sycylia.jpg'",
+					title: "Sycylia",
+					description: "<p>Lorem ipsum dolor sit amet.</p>",
+					id: 'carousel-cell5',
+					coords: {lat: 37.587794 , lng: 14.155048}
+				},
+				{
+					image: "'images/sydney.jpeg'",
+					title: "Sydney",
+					description: "<p>Lorem ipsum dolor sit amet.</p>",
+					id: 'carousel-cell6',
+					coords: {lat: -33.854816, lng: 151.216454}
+				}
+			]		
+
+		</script>
+
+		<!-- JS FILES -->
+
+		<script src="vendor/flickity.pkgd.min.js"></script>
+		<script src="vendor/hash.js"></script>
+		<script src="vendor/mustache.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+		<script src="js/script.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOP84xNRakQ3t90OMzl6UUnR6hfuyMGw4&callback=initMap"></script>
+
+
+		
+
+	</body>
+</html>
